@@ -1,0 +1,34 @@
+
+#ifdef __OBJC__ 
+
+#ifndef _PrefixHeader_pch
+#define _PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+
+typedef void(^ROMArrayblock)(NSArray *array);
+typedef void(^ROMJustblock)();
+typedef void(^ROMPanLoadingViewBlock)(NSInteger direction);
+typedef void(^ROMStringBlock)(NSString *titleStr);
+typedef void(^ROMIntegerBlock)(NSInteger tag);
+typedef void(^ROMErrorBlock)(NSError * error);
+typedef void(^ROMDataBlock)(NSData *data, NSError * error);
+typedef void(^ROMImageblock)(UITableViewCell *cell);
+
+
+// Base UI Framework
+#import "UIColor+ROMUnity.h"
+#import "ROMConfig.h"
+#import "Masonry.h"
+#import "ROMHUDView.h"
+
+#define kScreenBounds [UIScreen mainScreen].bounds
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kNavgationBarHeight 64
+
+#define SINGLE_LINE_WIDTH           (1 / [UIScreen mainScreen].scale)
+#define SINGLE_LINE_ADJUST_OFFSET   ((1 / [UIScreen mainScreen].scale) / 2)
+
+#endif
+#endif
